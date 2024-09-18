@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>SOftBank</title>
     <link rel="stylesheet" href="index.css">
-    
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -18,8 +21,8 @@
     </header>
 
     <section id="hero">
-        <h1>Solicita tu tarjeta  <br>de crédito con nosotros</h1>
-        
+        <h1>Solicita tu tarjeta <br>de crédito con nosotros</h1>
+
     </section>
 
     <section id="somos">
@@ -41,68 +44,101 @@
                     <h3>BASIC</h3>
                     <br>
                     <br>
-                    <p>Nuestra tarjeta basic tiene un costo de $15.000 por cuota de manejo y una tasa del 1.5, esperamos puedas disfrutar de los demas servicios que esta ofrece, Animate a solicitarla.</p>
+                    <p>Nuestra tarjeta basic tiene un costo de $15.000 por cuota de manejo y una tasa del 1.5, esperamos
+                        puedas disfrutar de los demas servicios que esta ofrece, Animate a solicitarla.</p>
                     <button>Solicitar</button>
                 </div>
                 <div class="carta">
                     <h3>ORO</h3>
                     <br>
                     <br>
-                    <p>Esta tarjeta oro, te da posibilidad de realizar compras en dolares y trae muchos beneficios dentro de los principales aeropuestos del mundo, como salas VIP, esta maneja una tasa del 0.9 y no cuenta con cuota de manejo.</p>
+                    <p>Esta tarjeta oro, te da posibilidad de realizar compras en dolares y trae muchos beneficios
+                        dentro de los principales aeropuestos del mundo, como salas VIP, esta maneja una tasa del 0.9 y
+                        no cuenta con cuota de manejo.</p>
                     <button>Solicitar</button>
                 </div>
                 <div class="carta">
                     <h3>PLATINO</h3>
                     <br>
                     <br>
-                    <p>Esta tarjeta cuenta con todos los servicios de la Basic y Oro, adicional a esto, tiene un 50% en tiquetes aéreos, puedes comprar tecnológia sin interes, la tasa es de 0.5 y no tiene cuota de manejo. </p>
-                    <button>Solicitar</button>
-                </div>  
+                    <p>Esta tarjeta cuenta con todos los servicios de la Basic y Oro, adicional a esto, tiene un 50% en
+                        tiquetes aéreos, puedes comprar tecnológia sin interes, la tasa es de 0.5 y no tiene cuota de
+                        manejo. </p>
+                    <a href="/basic.html">
+                        <button>Solicitar</button>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contacto">
-        <center><h1>Contáctanos a traves del siguiente formulario</h1></center>
-       
-            <form>
-                <center>
-               <p>
-                Digita tu Nombre <br>
-                <input type="text"/><br/><br/>
-                Digita tus Apellidos <br>
-                <input type="text"/><br/><br/>
-                Número de contácto <br>
-                <input type="text"/><br/><br/>
-                Correo eléctronico <br>
-                <input type="email"/><br><br>
-                Selecciona la tarjeta <br> 
-                    <select name="Tarjeta">
-                      <option>Selecciona</option>
-                      <option>Basic</option>
-                      <option>Oro</option>
-                      <option>Platino</option>
+    <section id="contacto" class="contact">
+        <center>
+            <h1>Contáctanos a traves del siguiente formulario</h1>
+        </center>
+
+        <div class="form-container">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+                    <small class="error-message" id="error-nombre"></small>
+                </div>
+        
+                <div class="form-group">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Ingresa tus apellidos">
+                    <small class="error-message" id="error-apellidos"></small>
+                </div>
+        
+                <div class="form-group">
+                    <label for="telefono">Número de contacto:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono">
+                    <small class="error-message" id="error-telefono"></small>
+                </div>
+        
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico">
+                    <small class="error-message" id="error-email"></small>
+                </div>
+        
+                <div class="form-group">
+                    <label for="tarjeta">Selecciona la tarjeta:</label>
+                    <select id="tarjeta" name="tarjeta">
+                        <option value="">Selecciona</option>
+                        <option value="basic">Basic</option>
+                        <option value="oro">Oro</option>
+                        <option value="platino">Platino</option>
                     </select>
-                    <br><br>
-                <input type="submit"> 
-            </center>
-            </p>
+                    <small class="error-message" id="error-tarjeta"></small>
+                </div>
+        
+                <div class="form-group">
+                    <button type="submit" class="btn-submit">Enviar</button>
+                </div>
             </form>
+        </div>
     </section>
 
-    
+
     <footer>
         <div class="container">
             <p>&copy; Lenguajes de programación avanzado 2</p>
         </div>
     </footer>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="javaScript.js"></script>
+
 </body>
 <script>
     <button onclick="solicitar">
         No presiones este boton
-      </button>
-    
-          alert ("alerta")
-          </script>
+    </button>
+
+    alert("alerta")
+</script>
+
 </html>
